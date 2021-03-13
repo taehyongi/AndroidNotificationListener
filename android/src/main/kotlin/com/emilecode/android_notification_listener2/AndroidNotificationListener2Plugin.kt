@@ -98,10 +98,11 @@ class AndroidNotificationListener2Plugin private constructor(private val context
    * Plugin constructor setting the context and registering the notification service.
    */
   init {
+    // 2021.0314 원할때 이동하게 하고자 막았음
     /* Check if permission is given, if not then go to the notification settings screen. */
-    if (!permissionGiven()) {
-      context.startActivity(Intent(ACTION_NOTIFICATION_LISTENER_SETTINGS))
-    }
+    // if (!permissionGiven()) {
+    //  context.startActivity(Intent(ACTION_NOTIFICATION_LISTENER_SETTINGS))
+    //}
     val receiver = NotificationReceiver()
     val intentFilter = IntentFilter()
     intentFilter.addAction(NotificationListener.NOTIFICATION_INTENT)
