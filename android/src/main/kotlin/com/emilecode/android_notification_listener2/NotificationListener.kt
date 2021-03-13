@@ -32,6 +32,7 @@ class NotificationListener : NotificationListenerService() {
           intent.putExtra(NOTIFICATION_PACKAGE_MESSAGE, packageMessage)
           intent.putExtra(NOTIFICATION_PACKAGE_TEXT, packageText)
           intent.putExtra(NOTIFICATION_PACKAGE_EXTRA, packageExtra)
+          Log.e("==========", packageMessage)
           sendBroadcast(intent) 
       }
       catch (error :Exception ){
